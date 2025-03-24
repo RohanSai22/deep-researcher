@@ -1,10 +1,8 @@
-# Deep Researcher
 
 <div align="center">
   <h1>🚀 Deep Researcher</h1>
   <p><strong>Lightning-Fast Deep Research Reports Powered by Google Gemini</strong></p>
-
-![GitHub Release](https://img.shields.io/github/v/release/u14app/deep-research)
+  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 [![Next.js](https://img.shields.io/badge/Next.js-111111?style=flat&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
@@ -34,7 +32,7 @@ Deep Researcher is a cutting-edge research tool built with **Next.js 15** and po
 
 ## 🎯 Roadmap
 
-- [x] Preserve research history.
+- [X] <strong>Preserve research history.</strong>
 - [ ] Enable editing of final reports and search results.
 - [ ] Add support for file uploads and local knowledge bases.
 - [ ] Expand support for other LLM models.
@@ -53,8 +51,8 @@ Deep Researcher is a cutting-edge research tool built with **Next.js 15** and po
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/u14app/deep-research.git
-   cd deep-research
+   git clone https://github.com/RohanSai22/deep-researcher.git
+   cd deep-researcher
    ```
 
 2. **Install dependencies**:
@@ -66,26 +64,23 @@ Deep Researcher is a cutting-edge research tool built with **Next.js 15** and po
 3. **Set up environment variables**:
    Create a `.env` file in the root directory and configure the following:
    ```env
-
+   
+    # (Optional) Server-side Gemini API Key (Required for server API calls)
+    
+    GOOGLE_GENERATIVE_AI_API_KEY=
+    
+    # (Optional) Server API Proxy URL
+    
+    API_PROXY_BASE_URL=
+    
+    # (Optional) Server API Access Password for enhanced security
+    
+    ACCESS_PASSWORD=
+    
+    # (Optional) Injected script code can be used for statistics or error tracking.
+    
+    HEAD_SCRIPTS=
    ```
-
-# (Optional) Server-side Gemini API Key (Required for server API calls)
-
-GOOGLE_GENERATIVE_AI_API_KEY=
-
-# (Optional) Server API Proxy URL
-
-API_PROXY_BASE_URL=
-
-# (Optional) Server API Access Password for enhanced security
-
-ACCESS_PASSWORD=
-
-# (Optional) Injected script code can be used for statistics or error tracking.
-
-HEAD_SCRIPTS=
-
-````
 
 **Important Notes on Environment Variables:**
 
@@ -154,7 +149,7 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 - [Next.js](https://nextjs.org/) - React framework for building performant web apps.
 - [Shadcn UI](https://ui.shadcn.com/) - Beautifully designed UI components.
 - [Google Gemini](https://ai.google.dev/gemini-api) - Powering intelligent research capabilities.
-
+- [Deep Research](https://github.com/u14app/deep-research) - Thanks to the project `u14app/deep-research` for inspiration.
 ---
 
 ## 🤝 Contributing
@@ -172,4 +167,4 @@ For major changes, please open an issue first to discuss your ideas.
 
 ## ✉️ Contact
 
-For questions, suggestions, or feedback, please create a new [issue](https://github.com/u14app/deep-research/issues).
+For questions, suggestions, or feedback, please create a new issue.
