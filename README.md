@@ -1,163 +1,175 @@
+# Deep Researcher
+
 <div align="center">
-<h1>Deep Researcher</h1>
+  <h1>🚀 Deep Researcher</h1>
+  <p><strong>Lightning-Fast Deep Research Reports Powered by Google Gemini</strong></p>
 
 ![GitHub Release](https://img.shields.io/github/v/release/u14app/deep-research)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 [![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
-[![Next](https://img.shields.io/badge/Next.js-111111?style=flat&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-111111?style=flat&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-111111?style=flat&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 
 </div>
 
-**Lightning-Fast Deep Research Reports Powered by Google Gemini**
+---
 
-Deep Researcher is a cutting-edge project built with Next.js 15, leveraging the power of Google Gemini models to generate in-depth research reports in approximately 2 minutes. Utilizing advanced "Thinking" and "Flash" models with internet access, Deep Research provides rapid and insightful analysis on a wide range of topics. Your privacy is paramount – all data is processed and stored locally.
+Deep Researcher is a cutting-edge research tool built with **Next.js 15** and powered by **Google Gemini models**. It generates in-depth research reports in under 2 minutes, leveraging advanced AI models like "Thinking" and "Flash" for rapid and insightful analysis. Designed with privacy in mind, all data is processed and stored locally.
+
+---
 
 ## ✨ Features
 
-- **Rapid Deep Research:** Generates comprehensive research reports in about 2 minutes, significantly accelerating your research process.
-- **Multi-platform Support**: Supports rapid deployment to Vercel, Cloudflare and other platforms.
-- **Powered by Google Gemini:** Utilizes the advanced Google Gemini models for accurate and insightful analysis.
-- **Thinking & Flash Models:** Employs sophisticated "Thinking" and "Flash" models to balance depth and speed, ensuring high-quality results quickly.
-- **Local & Server API Support:** Offers flexibility with both local and server-side API calling options to suit your needs.
-- **Privacy-Focused:** Your data remains private and secure, as all data is stored locally on your browser.
-- **Multi-language Support**: English、简体中文.
-- **Built with Modern Technologies:** Developed using Next.js 15 and Shadcn UI, ensuring a modern, performant, and visually appealing user experience.
-- **MIT Licensed:** Open-source and freely available for personal and commercial use under the MIT License.
+- **⚡ Rapid Research**: Generate comprehensive reports in ~2 minutes, saving time and effort.
+- **🌐 Multi-Platform Support**: Deploy seamlessly to Vercel, Cloudflare, or other platforms.
+- **🤖 Powered by Google Gemini**: Leverages advanced AI models for accurate and insightful analysis.
+- **🧠 Thinking & Flash Models**: Combines depth and speed for high-quality results.
+- **🔒 Privacy-Focused**: All data is processed and stored locally, ensuring your privacy.
+- **🌍 Multi-Language Support**: Supports English and Simplified Chinese.
+- **💻 Modern Tech Stack**: Built with Next.js 15, Tailwind CSS, and Shadcn UI for a sleek and performant experience.
+- **📜 Open Source**: Licensed under MIT for personal and commercial use.
+
+---
 
 ## 🎯 Roadmap
 
-- [x] Support preservation of research history
-- [ ] Support editing final report and search results
-- [ ] Support file upload and local knowledge base
-- [ ] Support for other LLM models
+- [x] Preserve research history.
+- [ ] Enable editing of final reports and search results.
+- [ ] Add support for file uploads and local knowledge bases.
+- [ ] Expand support for other LLM models.
+
+---
 
 ## 🚀 Getting Started
 
-1. Get [Gemini API Key](https://aistudio.google.com/app/apikey)
-2. One-click deployment of the project, you can choose to deploy to Vercel or Cloudflare
-
-   [![Deploy with Vercel](https://vercel.com/button)]
-
-   Currently the project supports deployment to Cloudflare, but you need to follow [How to deploy to Cloudflare Pages](./docs/How-to-deploy-to-Cloudflare-Pages.md) to do it.
-
-3. Start using
-
-## ⌨️ Development
-
-Follow these steps to get Deep Research up and running on your local browser.
-
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 18.18.0 or later recommended)
-- [pnpm](https://pnpm.io/) or [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Node.js](https://nodejs.org/) (v18.18.0 or later recommended)
+- [pnpm](https://pnpm.io/), [npm](https://www.npmjs.com/), or [yarn](https://yarnpkg.com/)
 
 ### Installation
 
-1. **Clone the repository:**
+1. **Clone the repository**:
 
    ```bash
-   git clone
-   cd deep-researcher
+   git clone https://github.com/u14app/deep-research.git
+   cd deep-research
    ```
 
-2. **Install dependencies:**
+2. **Install dependencies**:
 
    ```bash
    pnpm install  # or npm install or yarn install
    ```
 
-3. **Set up Environment Variables:**
-
-   Create a `.env` file in the root directory of your project and configure the following environment variables:
-
+3. **Set up environment variables**:
+   Create a `.env` file in the root directory and configure the following:
    ```env
-   # (Optional) Server-side Gemini API Key (Required for server API calls)
-   GOOGLE_GENERATIVE_AI_API_KEY=
 
-   # (Optional) Server API Proxy URL
-   API_PROXY_BASE_URL=
-
-   # (Optional) Server API Access Password for enhanced security
-   ACCESS_PASSWORD=
-
-   # (Optional) Injected script code can be used for statistics or error tracking.
-   HEAD_SCRIPTS=
    ```
 
-   **Important Notes on Environment Variables:**
+# (Optional) Server-side Gemini API Key (Required for server API calls)
 
-   - `GOOGLE_GENERATIVE_AI_API_KEY`: **Optional but required for using the server-side API.** You need to obtain a Google Generative AI API key from [Google AI Studio](https://aistudio.google.com/). This key should be kept secret and **never committed to your public repository.**
-   - `API_PROXY_BASE_URL`: **Optional.** If you need to use a proxy server for API requests, configure this variable with your proxy server's base URL. This is relevant for server-side API calls.
-   - `ACCESS_PASSWORD`: **Optional but highly recommended for server-side deployments.** Set a strong password to protect your server-side API endpoints. This password will be required to access server-side API functionalities.
-   - `HEAD_SCRIPTS`: **Optional** Injected script code can be used for statistics or error tracking.
+GOOGLE_GENERATIVE_AI_API_KEY=
 
-   **Privacy Reminder:** These environment variables are primarily used for **server-side API calls**. When using the **local API mode**, no API keys or server-side configurations are needed, further enhancing your privacy.
+# (Optional) Server API Proxy URL
 
-4. **Run the development server:**
+API_PROXY_BASE_URL=
 
-   ```bash
-   pnpm dev  # or npm run dev or yarn dev
-   ```
+# (Optional) Server API Access Password for enhanced security
 
-   Open your browser and visit [http://localhost:3000](http://localhost:3000) to access Deep Research.
+ACCESS_PASSWORD=
+
+# (Optional) Injected script code can be used for statistics or error tracking.
+
+HEAD_SCRIPTS=
+
+````
+
+**Important Notes on Environment Variables:**
+
+- `GOOGLE_GENERATIVE_AI_API_KEY`: **Optional but required for using the server-side API.** You need to obtain a Google Generative AI API key from [Google AI Studio](https://aistudio.google.com/). This key should be kept secret and **never committed to your public repository.**
+- `API_PROXY_BASE_URL`: **Optional.** If you need to use a proxy server for API requests, configure this variable with your proxy server's base URL. This is relevant for server-side API calls.
+- `ACCESS_PASSWORD`: **Optional but highly recommended for server-side deployments.** Set a strong password to protect your server-side API endpoints. This password will be required to access server-side API functionalities.
+- `HEAD_SCRIPTS`: **Optional** Injected script code can be used for statistics or error tracking.
+
+**Privacy Reminder:** These environment variables are primarily used for **server-side API calls**. When using the **local API mode**, no API keys or server-side configurations are needed, further enhancing your privacy.
+
+4. **Run the development server**:
+```bash
+pnpm dev  # or npm run dev or yarn dev
+````
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
 
 ## 🚢 Deployment
 
-### Vercel
+### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)]
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/)
 
-### Cloudflare
+### Deploy to Cloudflare
 
-Currently the project supports deployment to Cloudflare, but you need to follow [How to deploy to Cloudflare Pages](./docs/How-to-deploy-to-Cloudflare-Pages.md) to do it.
+Follow the [Cloudflare Pages Deployment Guide](./docs/How-to-deploy-to-Cloudflare-Pages.md).
 
 ### Static Deployment
 
-You can also build a static page version directly, and then upload all files in the `out` directory to any website service that supports static pages, such as Github Page, Cloudflare, Vercel, etc..
+Build a static version of the app:
 
 ```bash
 pnpm build:export
 ```
 
+Upload the contents of the `out` directory to any static hosting service (e.g., GitHub Pages, Cloudflare, Vercel).
+
+---
+
 ## ⚙️ Configuration
 
-As mentioned in the "Getting Started" section, Deep Research utilizes the following environment variables for server-side API configurations:
+Environment variables for server-side API configurations:
 
-- `GOOGLE_GENERATIVE_AI_API_KEY`
-- `API_PROXY_BASE_URL`
-- `ACCESS_PASSWORD`
+- `GOOGLE_GENERATIVE_AI_API_KEY`: Required for server-side API calls.
+- `API_PROXY_BASE_URL`: Optional proxy server URL.
+- `ACCESS_PASSWORD`: Optional password for securing server-side endpoints.
 
-These variables are **only required if you intend to use the server-side API calling functionality.** For local API calls, no configuration is necessary beyond setting up the project.
+---
 
 ## 🛡️ Privacy
 
-Deep Researcher is designed with your privacy in mind. **All research data and generated reports are stored locally on your machine.** We do not collect or transmit any of your research data to external servers (unless you are explicitly using server-side API calls, in which case data is sent to Google's Gemini API through your configured proxy if any). Your privacy is our priority.
+Your privacy is our priority. All research data and generated reports are stored locally on your machine. No data is transmitted to external servers unless explicitly using server-side API calls.
+
+---
 
 ## 📝 License
 
-Deep Researcher is released under the [MIT License](LICENSE). This license allows for free use, modification, and distribution for both commercial and non-commercial purposes.
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute it for personal and commercial purposes.
+
+---
 
 ## 🙏 Acknowledgements
 
-- [Next.js](https://nextjs.org/) - The React framework for building performant web applications.
-- [Shadcn UI](https://ui.shadcn.com/) - Beautifully designed components that helped streamline the UI development.
-- [Google Gemini](https://ai.google.dev/gemini-api) - Powering the intelligent research capabilities of Deep Research.
-- [Deep Research](https://github.com/u14app/deep-research) - Thanks to the project `u14app/deep-research` for inspiration.
+- [Next.js](https://nextjs.org/) - React framework for building performant web apps.
+- [Shadcn UI](https://ui.shadcn.com/) - Beautifully designed UI components.
+- [Google Gemini](https://ai.google.dev/gemini-api) - Powering intelligent research capabilities.
+
+---
 
 ## 🤝 Contributing
 
-We welcome contributions to Deep Research! If you have ideas for improvements, bug fixes, or new features, please feel free to:
+We welcome contributions! To contribute:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them.
+3. Commit your changes.
 4. Submit a pull request.
 
-For major changes, please open an issue first to discuss your proposed changes.
+For major changes, please open an issue first to discuss your ideas.
+
+---
 
 ## ✉️ Contact
 
-If you have any questions, suggestions, or feedback, please create a new [issue]
+For questions, suggestions, or feedback, please create a new [issue](https://github.com/u14app/deep-research/issues).
